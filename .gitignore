@@ -1,0 +1,17 @@
+# Build files
+/build
+/dist
+/venv
+node_modules
+/myapp/models/*
+__pycache__/
+.pytest_cache/
+temp_myapp/
+
+# Mac OS files
+*.DS_Store
+*.pyc
+*.pyo
+
+# Test files
+test.*

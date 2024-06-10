@@ -1,0 +1,8 @@
+<RCC>
+<qresource prefix="/">
+<file>myapp/frontend/dist/favicon.ico</file>
+<file>myapp/frontend/dist/index.html</file>
+<file>myapp/frontend/dist/manifest.json</file>
+<file>myapp/frontend/dist/assets/index-D7RR90QA.css</file>
+<file>myapp/frontend/dist/assets/index-rLOXYCgh.js</file></qresource>
+</RCC>
