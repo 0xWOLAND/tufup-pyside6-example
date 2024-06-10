@@ -3,8 +3,6 @@ from PySide6.QtCore import QUrl
 from PySide6.QtWidgets import QApplication, QMainWindow, QSystemTrayIcon, QMenu
 from PySide6.QtGui import QIcon
 
-from myapp.backend.server import Server
-from myapp.backend.core import Core
 from myapp import settings
 
 from tufup.client import Client
@@ -45,9 +43,6 @@ class SystemTrayIcon(QMainWindow):
         self.tray_icon = QSystemTrayIcon(QIcon(resource_path("icon.png")), self)
         self.tray_icon.setContextMenu(self.menu)
         self.tray_icon.show()
-
-        server = Server()
-        self._core = Core(server)
 
         showAction = self.menu.addAction("Show")
         showAction.triggered.connect(self.show)
@@ -164,6 +159,7 @@ def main(cmd_args):
                 "qtwebengine_locales",
             )
         )
+        os.environ["QTWEBENGINE_DISABLE_SANDBOX"] = "1"
 
     app = QApplication()
     app.setQuitOnLastWindowClosed(False)
