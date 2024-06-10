@@ -1,8 +1,1 @@
-diffusers==0.27.2
-llama_cpp_python==0.2.64
 PySide6==6.7.0
-Requests==2.31.0
-torch==2.3.0
-trainer @ git+https://github.com/0xWOLAND/Trainer.git@46599cfb80145d2ed41c7300f3827830ec151d39
-TTS @ git+https://github.com/0xWOLAND/TTS.git@7c44bade80cb5cdc7e6b798d27dfa3e84359fbbc
-urllib3==2.2.1
