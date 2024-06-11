@@ -1,7 +1,7 @@
 install: 
 	pip install -r requirements.txt
 build-frontend:
-	cd myapp/frontend && pnpm run build && cd ../..
+	cd myapp/frontend && pnpm i && pnpm run build && cd ../..
 build-resource:
 	rm -f resource_rc.py
 	python3 build_rc.py

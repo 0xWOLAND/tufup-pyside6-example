@@ -120,20 +120,20 @@ def main(cmd_args):
     update(pre=pre_release_channel)
 
     if hasattr(sys, "_MEIPASS"):
-        os.environ["QTWEBENGINEPROCESS_PATH"] = os.path.normpath(
-            os.path.join(
-                sys._MEIPASS,
-                "PySide6",
-                "Qt",
-                "lib",
-                "QtWebEngineCore.framework",
-                "Helpers",
-                "QtWebEngineProcess.app",
-                "Contents",
-                "MacOS",
-                "QtWebEngineProcess",
-            )
+        qtwebengine_path = os.path.join(
+            sys._MEIPASS,
+            "PySide6",
+            "Qt",
+            "lib",
+            "QtWebEngineCore.framework",
+            "Helpers",
+            "QtWebEngineProcess.app",
+            "Contents",
+            "MacOS",
+            "QtWebEngineProcess",
         )
+        print(f"QTWEBENGINEPROCESS_PATH: {qtwebengine_path}")
+        os.environ["QTWEBENGINEPROCESS_PATH"] = os.path.normpath(qtwebengine_path)
         os.environ["QTWEBENGINE_RESOURCES_PATH"] = os.path.normpath(
             os.path.join(
                 sys._MEIPASS,
